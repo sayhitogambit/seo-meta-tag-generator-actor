@@ -3,12 +3,12 @@
   "type": "object",
   "schemaVersion": 1,
   "properties": {
-    "pageContent": {"title": "Page Content", "type": "string", "editor": "textarea", "minLength": 10},
-    "keywords": {"title": "Target Keywords", "type": "array", "editor": "stringList", "default": []},
-    "url": {"title": "Page URL (optional)", "type": "string", "default": ""},
-    "industry": {"title": "Industry/Niche", "type": "string", "default": ""},
-    "model": {"title": "AI Model", "type": "string", "enum": ["openai/gpt-4o-mini", "google/gemini-2.0-flash-exp:free"], "default": "google/gemini-2.0-flash-exp:free"},
-    "openrouterApiKey": {"title": "OpenRouter API Key", "type": "string", "isSecret": true}
+    "pageContent": {"title": "Page Content", "type": "string", "description": "The main content of the webpage to generate meta tags for", "editor": "textarea", "minLength": 10},
+    "keywords": {"title": "Target Keywords", "type": "array", "description": "SEO keywords to incorporate into meta tags", "editor": "stringList", "default": []},
+    "url": {"title": "Page URL (optional)", "type": "string", "description": "URL of the page for additional context", "default": ""},
+    "industry": {"title": "Industry/Niche", "type": "string", "description": "Industry or niche for more targeted meta tags", "default": ""},
+    "model": {"title": "AI Model", "type": "string", "description": "AI model to use for generation", "enum": ["openai/gpt-4o-mini", "google/gemini-2.0-flash-exp:free"], "default": "google/gemini-2.0-flash-exp:free"},
+    "openrouterApiKey": {"title": "OpenRouter API Key", "type": "string", "description": "Your OpenRouter API key from https://openrouter.ai/keys", "isSecret": true}
   },
   "required": ["pageContent", "openrouterApiKey"]
 }
