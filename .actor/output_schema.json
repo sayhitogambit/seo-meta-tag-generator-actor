@@ -1,0 +1,83 @@
+{
+  "title": "SEO Meta Tag Generator Output",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "title": {
+      "title": "Meta Title",
+      "type": "string",
+      "description": "SEO-optimized meta title (50-60 characters)",
+      "editor": "textfield"
+    },
+    "metaDescription": {
+      "title": "Meta Description",
+      "type": "string",
+      "description": "SEO-optimized meta description (150-160 characters)",
+      "editor": "textarea"
+    },
+    "openGraphTags": {
+      "title": "Open Graph Tags",
+      "type": "object",
+      "description": "Open Graph meta tags for social media sharing",
+      "editor": "json",
+      "properties": {
+        "og:title": {
+          "type": "string",
+          "description": "Open Graph title"
+        },
+        "og:description": {
+          "type": "string",
+          "description": "Open Graph description"
+        },
+        "og:image": {
+          "type": "string",
+          "description": "Open Graph image URL"
+        }
+      }
+    },
+    "twitterCardTags": {
+      "title": "Twitter Card Tags",
+      "type": "object",
+      "description": "Twitter Card meta tags for Twitter sharing",
+      "editor": "json",
+      "properties": {
+        "twitter:title": {
+          "type": "string",
+          "description": "Twitter card title"
+        },
+        "twitter:description": {
+          "type": "string",
+          "description": "Twitter card description"
+        }
+      }
+    },
+    "keywords": {
+      "title": "SEO Keywords",
+      "type": "array",
+      "description": "Recommended SEO keywords for the page",
+      "editor": "json",
+      "items": {
+        "type": "string"
+      }
+    },
+    "cost": {
+      "title": "API Cost",
+      "type": "number",
+      "description": "Total API cost in USD",
+      "editor": "number"
+    },
+    "chargePrice": {
+      "title": "Charge Price",
+      "type": "number",
+      "description": "Price charged to user in USD",
+      "editor": "number"
+    },
+    "createdAt": {
+      "title": "Created At",
+      "type": "string",
+      "description": "ISO timestamp of when this was created",
+      "editor": "textfield",
+      "format": "date-time"
+    }
+  }
+}
