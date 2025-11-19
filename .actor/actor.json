@@ -1,0 +1,1 @@
+{"actorSpecification": 1, "name": "seo-meta-tag-generator", "title": "AI SEO Meta Tag Generator", "description": "Generate SEO-optimized meta titles, descriptions, and tags using AI.", "version": "1.0.0", "dockerfile": "./Dockerfile", "input": "./.actor/input_schema.json", "readme": "./README.md"}

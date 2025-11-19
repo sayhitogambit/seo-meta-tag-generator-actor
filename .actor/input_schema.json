@@ -1,0 +1,14 @@
+{
+  "title": "SEO Meta Tag Generator Input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "pageContent": {"title": "Page Content", "type": "string", "editor": "textarea", "minLength": 10},
+    "keywords": {"title": "Target Keywords", "type": "array", "editor": "stringList", "default": []},
+    "url": {"title": "Page URL (optional)", "type": "string", "default": ""},
+    "industry": {"title": "Industry/Niche", "type": "string", "default": ""},
+    "model": {"title": "AI Model", "type": "string", "enum": ["openai/gpt-4o-mini", "google/gemini-2.0-flash-exp:free"], "default": "google/gemini-2.0-flash-exp:free"},
+    "openrouterApiKey": {"title": "OpenRouter API Key", "type": "string", "isSecret": true}
+  },
+  "required": ["pageContent", "openrouterApiKey"]
+}
